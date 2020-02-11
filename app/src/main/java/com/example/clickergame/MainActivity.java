@@ -13,7 +13,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mhandler.postDelayed(autopayout, 100);
     }
+
 
     double cash = 0;
 
@@ -91,18 +93,17 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public void auto (View v){
-        while (true)
-        {
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                public void run() {
-                    //wait .1 sec
-                    cash = cash + autoPay;
-                }
-            }, 100);
+    private Handler mhandler = new Handler();
+
+    private Runnable autopayout = new Runnable() {
+        @Override
+        public void run() {
+            //every .1 seconds this will run and add auto pay to cash
+            cash = cash + autoPay;
+            displaymoney(cash);
+            mhandler.postDelayed(this, 100);
         }
-    }
+    };
 
 
 
@@ -113,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
             cash = cash - autoPrice;
             autoPay = (autoPay + autoMult);
             autoMult = autoMult * 1.05;
-            autoPrice = autoPrice * 1.15;
+            autoPrice = autoPrice * 1.1;
             autoPriceLevel = autoPriceLevel + 1;
         }
         displayAutoUpgrade(autoPrice);
