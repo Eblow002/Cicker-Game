@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         if (cash >= clickPrice){
             cash = cash - clickPrice;
             x = (x + xMult);
-            xMult = xMult * 1.02;
+            xMult = xMult * 1.1;
             clickPrice = clickPrice * 1.1;
             clickPriceLevel = clickPriceLevel + 1;
         }
@@ -113,9 +113,12 @@ public class MainActivity extends AppCompatActivity {
         if (cash >= autoPrice){
             cash = cash - autoPrice;
             autoPay = (autoPay + autoMult);
-            autoMult = autoMult * 1.05;
+            autoMult = autoMult * 1.075;
             autoPrice = autoPrice * 1.1;
             autoPriceLevel = autoPriceLevel + 1;
+            if (autoPriceLevel == 10 || autoPriceLevel == 20 || autoPriceLevel == 50 || autoPriceLevel == 100){
+                autoMult = autoMult * 2;
+            }
         }
         displayAutoUpgrade(autoPrice);
         displayAutoUpgradeText(autoPriceLevel);
