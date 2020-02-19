@@ -100,4 +100,14 @@
         android:onClick="click"
         android:text="Click Me!" />
 
+    <Button
+        android:id="@+id/UpgradeMainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorAccent"
+        android:text="Upgrade Main Button" />
+
 </RelativeLayout>

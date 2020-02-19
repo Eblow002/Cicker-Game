@@ -2,19 +2,45 @@ package com.example.clickergame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.os.Handler;
 
+import static java.lang.Math.log;
+import static java.lang.Math.pow;
+
 public class MainActivity extends AppCompatActivity {
+
+    //for new page
+    private Button BtnMove;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mhandler.postDelayed(autopayout, 100);
+
+        //form here
+        BtnMove = findViewById(R.id.UpgradeMainButton);
+
+        BtnMove.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                moveToActivityTwo();
+            }
+        });
     }
+
+        private void moveToActivityTwo(){
+        Intent intent = new Intent(MainActivity.this, Main_Button_Upgrade.class);
+        startActivity(intent);
+        }
+        //to here is also for new page
+
+
 
 
     double cash = 0;
@@ -70,11 +96,13 @@ public class MainActivity extends AppCompatActivity {
     public void click(View v){
         cash = (cash + x);
 
-
+        int firstDigit = (int) pow(10,(int)log(cash));
         displaymoney(cash);
 
 
     }
+
+
 
     public void clickUpgrade(View v){
         if (cash >= clickPrice){
@@ -88,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
         displayClickUpgradeText(clickPriceLevel);
         displaymoney(cash);
         updateButton(x);
+
     }
 
 
