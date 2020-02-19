@@ -14,6 +14,7 @@ import static java.lang.Math.pow;
 
 public class MainActivity extends AppCompatActivity {
 
+    //for new page
     private Button BtnMove;
 
     @Override
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mhandler.postDelayed(autopayout, 100);
 
+        //form here
         BtnMove = findViewById(R.id.UpgradeMainButton);
 
         BtnMove.setOnClickListener(new View.OnClickListener(){
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, Main_Button_Upgrade.class);
         startActivity(intent);
         }
-
+        //to here is also for new page
 
 
 
@@ -99,6 +101,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
 
     public void clickUpgrade(View v){
         if (cash >= clickPrice){
