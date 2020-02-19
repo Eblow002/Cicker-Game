@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     double cash = 0;
+    int decimil = 0;
 
     double x = 1;
     double xMult= 1;
@@ -55,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
     double autoMult = 0.1;
     int autoPriceLevel = 0;
 
+
+
+    String[] priceRound = new String[]{"", "K", "M", "B", "T", "q", "Q", "s", "S", "O", "N", "D"};
+
     public void updateButton(double money) {
         TextView scoreView = (TextView) findViewById(R.id.mainbutton);
         scoreView.setText(String.valueOf("$" + (float)Math.round(money * 100) / 100));
@@ -62,8 +67,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void displaymoney(double money) {
+        while (money >= 1000) {
+            money = money/1000;
+            decimil = decimil + 1;
+        }
+        
         TextView scoreView = (TextView) findViewById(R.id.money);
-        scoreView.setText(String.valueOf("$" + (float)Math.round(money * 100) / 100));
+        scoreView.setText(String.valueOf("$" + (float)Math.round(money * 100) / 100 + priceRound[decimil]));
     }
 
     public void displayClickUpgrade(double price) {
