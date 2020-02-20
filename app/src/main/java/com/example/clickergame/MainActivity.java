@@ -71,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void displaymoney(double money) {
-        decimil = 0;
         while(money >= 1000) {
             money = money/1000;
+        decimil = 0;
             decimil = decimil + 1;
         }
         TextView scoreView = (TextView) findViewById(R.id.money);
@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
         if (cash >= clickPrice){
             cash = cash - clickPrice;
             x = (x + xMult);
-            xMult = xMult * 1.1;
+            xMult = xMult * 1.075;
             clickPrice = clickPrice * 1.1;
             clickPriceLevel = clickPriceLevel + 1;
         }
@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
         if (cash >= autoPrice){
             cash = cash - autoPrice;
             autoPay = (autoPay + autoMult);
-            autoMult = autoMult * 1.075;
+            autoMult = autoMult * 1.074;
             autoPrice = autoPrice * 1.1;
             autoPriceLevel = autoPriceLevel + 1;
             if (autoPriceLevel == 10 || autoPriceLevel == 20 || autoPriceLevel == 50 || autoPriceLevel == 100){
