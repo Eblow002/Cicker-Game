@@ -7,6 +7,15 @@
     android:orientation="vertical"
     tools:context=".Main_Button_Upgrade">
 
-
+    <TextView
+        android:id="@+id/clickUpgradeText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        android:text="Upgrade Main Button: LEVEL 1"
+        android:textAlignment="center"
+        android:textSize="25dp" />
 
 </LinearLayout>

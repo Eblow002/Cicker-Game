@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    double cash = 950;
+    public static double cash = 950;
     int decimil = 0;
 
     double x = 1;
