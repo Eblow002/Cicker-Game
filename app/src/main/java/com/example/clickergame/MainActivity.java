@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    double cash = 0;
+    double cash = 950;
     int decimil = 0;
 
     double x = 1;
@@ -58,48 +58,77 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    String[] priceRound = new String[]{"", "K", "M", "B", "T", "q", "Q", "s", "S", "O", "N", "D"};
+    String[] roundMeArr = new String[]{"", "K", "M", "B", "T", "q", "Q", "s", "S", "O", "N", "D"};
 
     public void updateButton(double money) {
-        TextView scoreView = (TextView) findViewById(R.id.mainbutton);
-        scoreView.setText(String.valueOf("$" + (float)Math.round(money * 100) / 100));
-    }
-
-
-    public void displaymoney(double money) {
-        while (money >= 1000) {
+        decimil = 0;
+        while(money >= 1000) {
             money = money/1000;
             decimil = decimil + 1;
         }
-        
+        TextView scoreView = (TextView) findViewById(R.id.mainbutton);
+        scoreView.setText(String.valueOf("$" + (float)Math.round(money * 100) / 100 + roundMeArr[decimil]));
+    }
+
+    public void displaymoney(double money) {
+        decimil = 0;
+        while(money >= 1000) {
+            money = money/1000;
+            decimil = decimil + 1;
+        }
         TextView scoreView = (TextView) findViewById(R.id.money);
-        scoreView.setText(String.valueOf("$" + (float)Math.round(money * 100) / 100 + priceRound[decimil]));
+        scoreView.setText(String.valueOf("$" + (float)Math.round(money * 100) / 100 + roundMeArr[decimil]));
     }
 
     public void displayClickUpgrade(double price) {
+        decimil = 0;
+        while(price >= 1000) {
+            price = price/1000;
+            decimil = decimil + 1;
+        }
         TextView scoreView = (TextView) findViewById(R.id.clickUpgrade);
-        scoreView.setText(String.valueOf("$" + (float)Math.round(price * 100) / 100));
+        scoreView.setText(String.valueOf("$" + (float)Math.round(price * 100) / 100 + roundMeArr[decimil]));
     }
 
     public void displayClickUpgradeText(int level) {
+        decimil = 0;
+        while(level >= 1000) {
+            level = level/1000;
+            decimil = decimil + 1;
+        }
         TextView scoreView = (TextView) findViewById(R.id.clickUpgradeText);
-        scoreView.setText(String.valueOf(" Upgrade Main Button: LEVEL " + level));
+        scoreView.setText(String.valueOf(" Upgrade Main Button: LEVEL " + level + roundMeArr[decimil]));
     }
 
     public void displayAutoUpgradeText(int level) {
+        decimil = 0;
+        while(level >= 1000) {
+            level = level/1000;
+            decimil = decimil + 1;
+        }
         TextView scoreView = (TextView) findViewById(R.id.autoUpgradeText);
-        scoreView.setText(String.valueOf(" Upgrade Auto Clicker: LEVEL " + level));
+        scoreView.setText(String.valueOf(" Upgrade Auto Clicker: LEVEL " + level + roundMeArr[decimil]));
     }
 
     public void displayAutoUpgrade(double price) {
+        decimil = 0;
+        while(price >= 1000) {
+            price = price/1000;
+            decimil = decimil + 1;
+        }
         TextView scoreView = (TextView) findViewById(R.id.autoUpgrade);
-        scoreView.setText(String.valueOf("$" + (float)Math.round(price * 100) / 100));
+        scoreView.setText(String.valueOf("$" + (float)Math.round(price * 100) / 100 + roundMeArr[decimil]));
     }
 
     public void displayAuto(double money) {
+        decimil = 0;
+        while(money >= 1000) {
+            money = money/1000;
+            decimil = decimil + 1;
+        }
         TextView scoreView = (TextView) findViewById(R.id.autoDisplay);
         money = money * 10;
-        scoreView.setText(String.valueOf("$" + (float)Math.round(money * 100) / 100 + "/sec"));
+        scoreView.setText(String.valueOf("$" + (float)Math.round(money * 100) / 100 + "" + roundMeArr[decimil] + "/sec"));
     }
 
 
