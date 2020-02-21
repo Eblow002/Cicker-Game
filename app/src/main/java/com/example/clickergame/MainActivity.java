@@ -22,8 +22,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mhandler.postDelayed(autopayout, 100);
-
-
+        displayClickUpgrade(clickPrice);
+        displayClickUpgradeText(clickPriceLevel);
+        updateButton(x);
+        displayAutoUpgrade(autoPrice);
+        displayAutoUpgradeText(autoPriceLevel);
+        displaymoney(cash);
+        displayAuto(autoPay);
 
         //form here
         BtnMove = findViewById(R.id.UpgradeMainButton);
@@ -45,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public static double cash = 9500;
+    public static double cash = 950000;
     public static int decimil = 0;
 
     public static double x = 1;
@@ -73,9 +78,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void displaymoney(double money) {
+        decimil = 0;
         while(money >= 1000) {
             money = money/1000;
-        decimil = 0;
             decimil = decimil + 1;
         }
         TextView scoreView = (TextView) findViewById(R.id.money);
@@ -123,13 +128,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void displayAuto(double money) {
+        money = money * 10;
         decimil = 0;
         while(money >= 1000) {
             money = money/1000;
             decimil = decimil + 1;
         }
         TextView scoreView = (TextView) findViewById(R.id.autoDisplay);
-        money = money * 10;
         scoreView.setText(String.valueOf("$" + (float)Math.round(money * 100) / 100 + "" + roundMeArr[decimil] + "/sec"));
     }
 
@@ -173,6 +178,7 @@ public class MainActivity extends AppCompatActivity {
             cash = cash + autoPay;
             displaymoney(cash);
             mhandler.postDelayed(this, 100);
+
         }
     };
 
