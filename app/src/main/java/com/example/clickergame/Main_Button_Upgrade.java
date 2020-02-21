@@ -97,6 +97,7 @@ public class Main_Button_Upgrade extends AppCompatActivity {
         displaymoney(cash);
     }
 
+    // variables dont update because they are in a function
     double clickUpgrade1Mult = 1.1;
     int clickUpgrade1Level = 0;
     double clickUpgrade1Price = 5;
