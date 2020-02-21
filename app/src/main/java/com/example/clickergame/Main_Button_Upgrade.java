@@ -33,7 +33,7 @@ public class Main_Button_Upgrade extends AppCompatActivity {
         setContentView(R.layout.activity_main__button__upgrade);
         mhandler.postDelayed(autopayout, 100);
         displayClickUpgrade(clickPrice);
-
+        displayClickUpgradeText(clickPriceLevel);
 
         BtnMove = findViewById(R.id.back);
 
