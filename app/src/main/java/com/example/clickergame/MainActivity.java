@@ -14,6 +14,10 @@ import static java.lang.Math.pow;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
+    
+
     //for new page
     private Button MainButtonUpgrade;
     private Button AutoClickUpgrade;
