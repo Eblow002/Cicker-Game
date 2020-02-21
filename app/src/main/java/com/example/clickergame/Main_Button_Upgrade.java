@@ -32,8 +32,8 @@ public class Main_Button_Upgrade extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main__button__upgrade);
         mhandler.postDelayed(autopayout, 100);
-        displayClickUpgrade(clickPrice);
-        displayClickUpgradeText(clickPriceLevel);
+        displayClickUpgrade(clickUpgrade1Price);
+        displayClickUpgradeText(clickUpgrade1Level);
 
         BtnMove = findViewById(R.id.back);
 
@@ -84,9 +84,37 @@ public class Main_Button_Upgrade extends AppCompatActivity {
         scoreView.setText(String.valueOf(" Upgrade Main Button: LEVEL " + level + roundMeArr[decimil]));
     }
 
+    //test(Mult = how much to multiply add by, level = variable for the level, price = how much for THE FIRST ONE, add = how much to add to the total, priceMult = how much to increce the price by each time);
+
+    public void test(double Mult, double level, double price, double add, double priceMult) {
+        if (cash >= price){
+            cash = cash - price;
+            x = (x + add);
+            add = add * Mult;
+            price = price * priceMult;
+            level = level + 1;
+        }
+        displaymoney(cash);
+    }
+
+    double clickUpgrade1Mult = 1.1;
+    int clickUpgrade1Level = 0;
+    double clickUpgrade1Price = 5;
+    double clickUpgrade1Add = 1;
+    double clickUpgrade1PriceMult = 1.15;
 
 
 
+
+
+    public void clickUpgrade1(View v){
+
+        test(clickUpgrade1Mult, clickUpgrade1Level, clickUpgrade1Price, clickUpgrade1Add, clickUpgrade1PriceMult);
+
+        displayClickUpgrade(clickUpgrade1Price);
+        displayClickUpgradeText(clickUpgrade1Level);
+        displaymoney(cash);
+    }
 
 
 

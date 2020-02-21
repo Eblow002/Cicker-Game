@@ -52,7 +52,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="10dp"
         android:background="@color/colorAccent"
-        android:onClick="clickUpgrade"
+        android:onClick="clickUpgrade1"
         android:text="$5"
         android:textAlignment="center"
         android:textSize="25dp" />
