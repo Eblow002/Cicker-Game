@@ -14,10 +14,6 @@ import static java.lang.Math.pow;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
-    
-
     //for new page
     private Button MainButtonUpgrade;
     private Button AutoClickUpgrade;
@@ -27,11 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mhandler.postDelayed(autopayout, 100);
-        displayClickUpgrade(clickPrice);
-        displayClickUpgradeText(clickPriceLevel);
         updateButton(x);
-        displayAutoUpgrade(autoPrice);
-        displayAutoUpgradeText(autoPriceLevel);
         displaymoney(cash);
         displayAuto(autoPay);
 
@@ -104,46 +96,6 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf("$" + (float) Math.round(money * 100) / 100 + roundMeArr[decimil]));
     }
 
-    public void displayClickUpgrade(double price) {
-        decimil = 0;
-        while (price >= 1000) {
-            price = price / 1000;
-            decimil = decimil + 1;
-        }
-        TextView scoreView = (TextView) findViewById(R.id.clickUpgrade);
-        scoreView.setText(String.valueOf("$" + (float) Math.round(price * 100) / 100 + roundMeArr[decimil]));
-    }
-
-    public void displayClickUpgradeText(int level) {
-        decimil = 0;
-        while (level >= 1000) {
-            level = level / 1000;
-            decimil = decimil + 1;
-        }
-        TextView scoreView = (TextView) findViewById(R.id.clickUpgradeText);
-        scoreView.setText(String.valueOf(" Upgrade Main Button: LEVEL " + level + roundMeArr[decimil]));
-    }
-
-    public void displayAutoUpgradeText(int level) {
-        decimil = 0;
-        while (level >= 1000) {
-            level = level / 1000;
-            decimil = decimil + 1;
-        }
-        TextView scoreView = (TextView) findViewById(R.id.autoUpgradeText);
-        scoreView.setText(String.valueOf(" Upgrade Auto Clicker: LEVEL " + level + roundMeArr[decimil]));
-    }
-
-    public void displayAutoUpgrade(double price) {
-        decimil = 0;
-        while (price >= 1000) {
-            price = price / 1000;
-            decimil = decimil + 1;
-        }
-        TextView scoreView = (TextView) findViewById(R.id.autoUpgrade);
-        scoreView.setText(String.valueOf("$" + (float) Math.round(price * 100) / 100 + roundMeArr[decimil]));
-    }
-
     public void displayAuto(double money) {
         money = money * 10;
         decimil = 0;
@@ -166,20 +118,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void clickUpgrade(View v) {
-        if (cash >= clickPrice) {
-            cash = cash - clickPrice;
-            x = (x + xMult);
-            xMult = xMult * 1.075;
-            clickPrice = clickPrice * 1.1;
-            clickPriceLevel = clickPriceLevel + 1;
-        }
-        displayClickUpgrade(clickPrice);
-        displayClickUpgradeText(clickPriceLevel);
-        displaymoney(cash);
-        updateButton(x);
 
-    }
 
 
     private Handler mhandler = new Handler();
@@ -199,22 +138,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
 
-    public void autoUpgrade(View v) {
-        if (cash >= autoPrice) {
-            cash = cash - autoPrice;
-            autoPay = (autoPay + autoMult);
-            autoMult = autoMult * 1.074;
-            autoPrice = autoPrice * 1.1;
-            autoPriceLevel = autoPriceLevel + 1;
-            if (autoPriceLevel == 10 || autoPriceLevel == 20 || autoPriceLevel == 50 || autoPriceLevel == 100) {
-                autoMult = autoMult * 2;
-            }
-        }
-        displayAutoUpgrade(autoPrice);
-        displayAutoUpgradeText(autoPriceLevel);
-        displaymoney(cash);
-        displayAuto(autoPay);
-    }
+
 
 
 }
