@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Main_Button_Upgrade">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorAccent"
+            android:text="Back" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="$0"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="50dp" />
+
+    <TextView
+        android:id="@+id/autoUpgradeText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        android:text="Upgrade Auto Click: LEVEL 1"
+        android:textAlignment="center"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/autoUpgrade"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        android:onClick="autoUpgrade"
+        android:text="$50"
+        android:textAlignment="center"
+        android:textSize="25dp" />
+
+</LinearLayout>
