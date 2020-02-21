@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mhandler.postDelayed(autopayout, 100);
 
+
+
         //form here
         BtnMove = findViewById(R.id.UpgradeMainButton);
 
@@ -43,18 +45,18 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public static double cash = 950;
-    int decimil = 0;
+    public static double cash = 9500;
+    public static int decimil = 0;
 
-    double x = 1;
-    double xMult= 1;
-    double clickPrice = 5;
-    int clickPriceLevel = 1;
+    public static double x = 1;
+    public static double xMult= 1;
+    public static double clickPrice = 5;
+    public static int clickPriceLevel = 1;
 
-    double autoPrice = 50;
-    double autoPay = 0;
-    double autoMult = 0.1;
-    int autoPriceLevel = 0;
+    public static double autoPrice = 50;
+    public static double autoPay = 0;
+    public static double autoMult = 0.1;
+    public static int autoPriceLevel = 0;
 
 
 
@@ -166,6 +168,7 @@ public class MainActivity extends AppCompatActivity {
     private Runnable autopayout = new Runnable() {
         @Override
         public void run() {
+            updateButton(x);
             //every .1 seconds this will run and add auto pay to cash
             cash = cash + autoPay;
             displaymoney(cash);

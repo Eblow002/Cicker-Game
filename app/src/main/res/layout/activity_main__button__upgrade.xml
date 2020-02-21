@@ -8,6 +8,16 @@
     tools:context=".Main_Button_Upgrade">
 
     <TextView
+        android:id="@+id/money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="$0"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="50dp" />
+
+    <TextView
         android:id="@+id/clickUpgradeText"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -15,6 +25,18 @@
         android:layout_marginTop="10dp"
         android:background="@color/colorAccent"
         android:text="Upgrade Main Button: LEVEL 1"
+        android:textAlignment="center"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/clickUpgrade"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        android:onClick="clickUpgrade"
+        android:text="$5"
         android:textAlignment="center"
         android:textSize="25dp" />
 
