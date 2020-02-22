@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     //for new page
     private Button MainButtonUpgrade;
     private Button AutoClickUpgrade;
+    private Button DevOptions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         //form here
         MainButtonUpgrade = findViewById(R.id.UpgradeMainButton);
         AutoClickUpgrade = findViewById(R.id.UpgradeAutoClick);
+        DevOptions = findViewById(R.id.DevOptions);
+
 
         MainButtonUpgrade.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +48,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        DevOptions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveToDevOptions();
+            }
+        });
+
     }
 
     private void moveToMainButtonUpgrade() {
@@ -54,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void moveToAutoClickUpgrade() {
         Intent intent = new Intent(MainActivity.this, Auto_Click_Upgrade.class);
+        startActivity(intent);
+    }
+
+    private void moveToDevOptions() {
+        Intent intent = new Intent(MainActivity.this, Dev_Options.class);
         startActivity(intent);
     }
     //to here is also for new page

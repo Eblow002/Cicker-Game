@@ -55,4 +55,22 @@
         android:background="@color/colorAccent"
         android:text="Upgrade Auto Clicker" />
 
+    <Button
+        android:id="@+id/DevOptions"
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:background="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/decoy"
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="20dp"
+        android:background="@color/colorAccent" />
+
 </RelativeLayout>
