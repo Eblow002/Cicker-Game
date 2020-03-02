@@ -31,6 +31,7 @@
         android:layout_height="wrap_content"
         android:hint="Developer Code"
         android:textAlignment="center"
+        android:importantForAutofill="no"
         android:textSize="20sp" />
 
     <Button
@@ -42,7 +43,14 @@
         android:onClick="submit"
         android:text="submit"
         android:textAlignment="center"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:onClick="test"
+        />
 
 
 

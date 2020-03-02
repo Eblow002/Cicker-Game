@@ -56,7 +56,7 @@
         android:text="Upgrade Auto Clicker" />
 
     <Button
-        android:id="@+id/DevOptions"
+        android:id="@+id/DevOptionsReal"
         android:layout_width="3dp"
         android:layout_height="3dp"
         android:layout_alignParentBottom="true"

@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import static com.example.clickergame.MainActivity.cash;
+import static java.lang.Math.log;
+import static java.lang.Math.pow;
 
 
 public class Dev_Options extends AppCompatActivity {
@@ -41,11 +43,17 @@ public class Dev_Options extends AppCompatActivity {
     EditText et = (EditText) findViewById(R.id.DevCode);
     String DevCode= et.getEditableText().toString();
 
-    public void submit(View V){
+    public void submit(View v){
+        int test = 1;
         if (DevCode == devCode){
-            back();
+            test = 0;
         }
     }
+
+    public void test(View v){
+
+    }
+
 
 //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
