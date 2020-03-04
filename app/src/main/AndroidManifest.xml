@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Dev_Options_Real"></activity>
+        <activity android:name=".Cheat_Screen"></activity>
+        <activity android:name=".Dev_Options_Real" />
         <activity android:name=".Dev_Options" />
         <activity android:name=".Auto_Click_Upgrade" />
         <activity android:name=".Main_Button_Upgrade" />

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cheat_Screen">
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorAccent"
+        android:text="Back" />
+
+    <EditText
+        android:id="@+id/cash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Set Cash"
+        android:layout_marginTop="200dp"
+        android:layout_centerVertical="true"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/Comfirm_Cash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="210dp"
+        android:background="@color/colorAccent"
+        android:onClick="Comfirm_Cash"
+        android:text="Comfirm"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/Auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Set Cash"
+        android:layout_marginTop="225dp"
+        android:layout_centerVertical="true"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/Comfirm_Auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="235dp"
+        android:background="@color/colorAccent"
+        android:onClick="Comfirm_Cash"
+        android:text="Comfirm"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/Click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Set Cash"
+        android:layout_marginTop="250dp"
+        android:layout_centerVertical="true"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/Comfirm_Click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="260dp"
+        android:background="@color/colorAccent"
+        android:onClick="Comfirm_Cash"
+        android:text="Comfirm"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+</LinearLayout>

@@ -36,6 +36,11 @@ public class Dev_Options_Real extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private void cheat(){
+        Intent intent = new Intent(Dev_Options_Real.this, Cheat_Screen.class);
+        startActivity(intent);
+    }
+
 
 
     public void submit(View v){
@@ -44,7 +49,7 @@ public class Dev_Options_Real extends AppCompatActivity {
         EditText inputText = (EditText)findViewById(R.id.DevCode);
         attempt = Double.parseDouble(inputText.getText().toString());
         if (attempt == devCode){
-            back();
+            cheat();
         }
     }
 }
