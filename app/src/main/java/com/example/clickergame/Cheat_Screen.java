@@ -53,7 +53,20 @@ public class Cheat_Screen extends AppCompatActivity {
         cash = input;
     }
 
+    public void Comfirm_Auto(View v){
+        double input = 0;
+        EditText inputText = (EditText)findViewById(R.id.Auto);
+        input = Double.parseDouble(inputText.getText().toString());
+        input = input/10;
+        autoPay = input;
+    }
 
+    public void Comfirm_Click(View v){
+        double input = 0;
+        EditText inputText = (EditText)findViewById(R.id.Click);
+        input = Double.parseDouble(inputText.getText().toString());
+        x = input;
+    }
 
 
 

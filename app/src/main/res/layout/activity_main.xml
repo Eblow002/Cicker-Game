@@ -65,4 +65,14 @@
         android:layout_margin="20dp"
         android:background="@color/colorAccent" />
 
+    <Button
+        android:id="@+id/Prestige"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="#FFD603"
+        android:text="W" />
+
 </RelativeLayout>

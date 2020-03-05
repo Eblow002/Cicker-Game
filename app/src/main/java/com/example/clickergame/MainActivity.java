@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private Button MainButtonUpgrade;
     private Button AutoClickUpgrade;
     private Button DevOptionsReal;
+    private Button Prestige;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         MainButtonUpgrade = findViewById(R.id.UpgradeMainButton);
         AutoClickUpgrade = findViewById(R.id.UpgradeAutoClick);
         DevOptionsReal = findViewById(R.id.DevOptionsReal);
-
+        Prestige = findViewById(R.id.Prestige);
 
         MainButtonUpgrade.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +56,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Prestige.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveToPrestige();
+            }
+        });
+
+
     }
 
     private void moveToMainButtonUpgrade() {
@@ -71,10 +80,15 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, Dev_Options_Real.class);
         startActivity(intent);
     }
+
+    private void moveToPrestige() {
+        Intent intent = new Intent(MainActivity.this, Prestige.class);
+        startActivity(intent);
+    }
     //to here is also for new page
 
 
-    public static double cash = 950000;
+    public static double cash = 0;
     public static int decimil = 0;
 
     public static double x = 1;
