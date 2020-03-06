@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static double cash = 0;
     public static int decimil = 0;
+    public static double prestige = 1;
 
     public static double x = 1;
     public static double xMult = 1;

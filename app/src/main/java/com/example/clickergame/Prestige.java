@@ -8,6 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import static com.example.clickergame.MainActivity.clickPriceLevel;
 import static com.example.clickergame.MainActivity.autoPriceLevel;
+import static com.example.clickergame.MainActivity.prestige;
+import static com.example.clickergame.MainActivity.cash;
+import static com.example.clickergame.MainActivity.decimil;
+import static com.example.clickergame.MainActivity.x;
+import static com.example.clickergame.MainActivity.xMult;
+import static com.example.clickergame.MainActivity.clickPrice;
+import static com.example.clickergame.MainActivity.autoPrice;
+import static com.example.clickergame.MainActivity.autoPay;
+import static com.example.clickergame.MainActivity.autoMult;
+
+
+
 
 public class Prestige extends AppCompatActivity {
 
@@ -38,8 +50,6 @@ public class Prestige extends AppCompatActivity {
         });
     }
 
-    public static double prestige = 0;
-
     private void back(){
         Intent intent = new Intent(Prestige.this, MainActivity.class);
         startActivity(intent);
@@ -48,6 +58,16 @@ public class Prestige extends AppCompatActivity {
     private void Prestige(){
         prestige = ((clickPriceLevel + autoPriceLevel) / 10) + prestige;
         //set all vars to reset then make prestige  multiply
+        cash = 0;
+        decimil = 0;
+        x = 1;
+        xMult = 1;
+        clickPrice = 5;
+        clickPriceLevel = 1;
+        autoPrice = 50;
+        autoPay = 0;
+        autoMult = 0.1;
+        autoPriceLevel = 0;
 
         Intent intent = new Intent(Prestige.this, MainActivity.class);
         startActivity(intent);
