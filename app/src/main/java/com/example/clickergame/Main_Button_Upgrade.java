@@ -9,8 +9,6 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
-//vv this is how to use variables here vv
 import static com.example.clickergame.MainActivity.cash;
 import static com.example.clickergame.MainActivity.autoPay;
 import static com.example.clickergame.MainActivity.x;
@@ -21,7 +19,7 @@ import static com.example.clickergame.MainActivity.decimil;
 
 
 
-//^^ this is how to use variables here ^^
+
 
 public class Main_Button_Upgrade extends AppCompatActivity {
 
