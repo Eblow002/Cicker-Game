@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
 import static com.example.clickergame.MainActivity.clickPriceLevel;
 import static com.example.clickergame.MainActivity.autoPriceLevel;
 import static com.example.clickergame.MainActivity.prestige;
@@ -32,7 +34,12 @@ public class Prestige extends AppCompatActivity {
         setContentView(R.layout.activity_prestige);
 
         BtnMove = findViewById(R.id.back);
-        BtnMove = findViewById(R.id.Prestige);
+        Prestige = findViewById(R.id.Prestige);
+
+
+
+        TextView scoreView = (TextView) findViewById(R.id.prestigeLevel);
+        scoreView.setText(String.valueOf("Prestige Multiplier: " + prestige + "X"));
 
 
         BtnMove.setOnClickListener(new View.OnClickListener(){
@@ -55,8 +62,22 @@ public class Prestige extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void displayPrestigeLevel(double money) {
+        decimil = 0;
+        TextView scoreView = (TextView) findViewById(R.id.prestigeLevel);
+        scoreView.setText(String.valueOf("Prestige Multiplier: " + prestige + "X"));
+    }
+    public void displayPrestigeAddition(double money) {
+        decimil = 0;
+        TextView scoreView = (TextView) findViewById(R.id.prestigeAddition);
+        scoreView.setText(String.valueOf("Prestige To Gain:  " + (prestige - ((clickPriceLevel + autoPriceLevel) / 10)) + "X"));
+    }
+
+
+
+
     private void Prestige(){
-        prestige = ((clickPriceLevel + autoPriceLevel) / 10) + prestige;
+        prestige = ((clickPriceLevel + autoPriceLevel) / 100) + prestige;
         //set all vars to reset then make prestige  multiply
         cash = 0;
         decimil = 0;

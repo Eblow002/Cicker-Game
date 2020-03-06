@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void displayAuto(double money) {
-        money = money * 10;
+        money = (money * 10);
         decimil = 0;
         while (money >= 1000) {
             money = money / 1000;
@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void click(View v) {
-        cash = (cash + x);
+        cash = cash + (x * prestige);
 
         int firstDigit = (int) pow(10, (int) log(cash));
         displaymoney(cash);
@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
         public void run() {
             updateButton(x);
             //every .1 seconds this will run
-            cash = cash + autoPay;
+            cash = cash + (autoPay * prestige);
             displaymoney(cash);
 
             mhandler.postDelayed(this, 100);
@@ -166,6 +166,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     };
+
+
+
+
 
 
 

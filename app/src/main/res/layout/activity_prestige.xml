@@ -15,6 +15,16 @@
         android:background="@color/colorAccent"
         android:text="Back" />
 
+    <TextView
+        android:id="@+id/prestigeLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prestige Multiplier: 1X"
+        android:layout_alignTop="@+id/Prestige"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20dp" />
+
     <Button
         android:id="@+id/Prestige"
         android:layout_width="wrap_content"
@@ -23,5 +33,15 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:background="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/prestigeAddition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Prestige To Gain: 0X"
+        android:layout_alignBottom="@+id/Prestige"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20dp" />
 
 </RelativeLayout>
