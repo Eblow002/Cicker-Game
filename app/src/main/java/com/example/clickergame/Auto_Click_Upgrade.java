@@ -52,36 +52,45 @@ public class Auto_Click_Upgrade extends AppCompatActivity {
 
 
 
-    String[] roundMeArr = new String[]{"", "K", "M", "B", "T", "q", "Q", "s", "S", "O", "N", "D"};
+    String[] roundMeArr = new String[]{"", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
 
     public void displaymoney(double money) {
         decimil = 0;
-        while(money >= 1000) {
+        while(money >= 1000 && decimil <= 26) {
             money = money/1000;
             decimil = decimil + 1;
         }
         TextView scoreView = (TextView) findViewById(R.id.money);
         scoreView.setText(String.valueOf("$" + (float)Math.round(money * 100) / 100 + roundMeArr[decimil]));
+        if (decimil > 26){
+            scoreView.setText(String.valueOf("$∞"));
+        }
     }
 
     public void displayAutoUpgradeText(int level) {
         decimil = 0;
-        while(level >= 1000) {
+        while(level >= 1000 && decimil <= 26) {
             level = level/1000;
             decimil = decimil + 1;
         }
         TextView scoreView = (TextView) findViewById(R.id.autoUpgradeText);
         scoreView.setText(String.valueOf(" Upgrade Auto Clicker: LEVEL " + level + roundMeArr[decimil]));
+        if (decimil > 26){
+            scoreView.setText(String.valueOf("$∞"));
+        }
     }
 
     public void displayAutoUpgrade(double price) {
         decimil = 0;
-        while(price >= 1000) {
+        while(price >= 1000 && decimil <= 26) {
             price = price/1000;
             decimil = decimil + 1;
         }
         TextView scoreView = (TextView) findViewById(R.id.autoUpgrade);
         scoreView.setText(String.valueOf("$" + (float)Math.round(price * 100) / 100 + roundMeArr[decimil]));
+        if (decimil > 26){
+            scoreView.setText(String.valueOf("$∞"));
+        }
     }
 
 
