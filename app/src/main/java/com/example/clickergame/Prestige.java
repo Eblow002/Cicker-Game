@@ -36,7 +36,8 @@ public class Prestige extends AppCompatActivity {
         BtnMove = findViewById(R.id.back);
         Prestige = findViewById(R.id.Prestige);
 
-
+        displayPrestigeLevel();
+        displayPrestigeAddition();
 
         TextView scoreView = (TextView) findViewById(R.id.prestigeLevel);
         scoreView.setText(String.valueOf("Prestige Multiplier: " + prestige + "X"));

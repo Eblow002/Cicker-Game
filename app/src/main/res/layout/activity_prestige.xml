@@ -23,7 +23,7 @@
         android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/holo_green_dark"
-        android:textSize="50dp" />
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/Prestige"
@@ -43,6 +43,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="200dp"
         android:textColor="@android:color/holo_green_dark"
-        android:textSize="50dp" />
+        android:textSize="30dp" />
 
 </RelativeLayout>
