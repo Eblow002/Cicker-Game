@@ -62,15 +62,15 @@ public class Prestige extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void displayPrestigeLevel(double money) {
+    public void displayPrestigeLevel() {
         decimil = 0;
         TextView scoreView = (TextView) findViewById(R.id.prestigeLevel);
         scoreView.setText(String.valueOf("Prestige Multiplier: " + prestige + "X"));
     }
-    public void displayPrestigeAddition(double money) {
+    public void displayPrestigeAddition() {
         decimil = 0;
         TextView scoreView = (TextView) findViewById(R.id.prestigeAddition);
-        scoreView.setText(String.valueOf("Prestige To Gain:  " + (prestige - ((clickPriceLevel + autoPriceLevel) / 10)) + "X"));
+        scoreView.setText(String.valueOf("Prestige To Gain:  " + ((clickPriceLevel + autoPriceLevel) / 100) + "X"));
     }
 
 
@@ -89,6 +89,9 @@ public class Prestige extends AppCompatActivity {
         autoPay = 0;
         autoMult = 0.1;
         autoPriceLevel = 0;
+
+        displayPrestigeLevel();
+        displayPrestigeAddition();
 
         Intent intent = new Intent(Prestige.this, MainActivity.class);
         startActivity(intent);

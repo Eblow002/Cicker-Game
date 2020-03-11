@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:background="@color/colorAccent"
         android:text="Back" />
 
@@ -20,10 +20,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Prestige Multiplier: 1X"
-        android:layout_alignTop="@+id/Prestige"
+        android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/holo_green_dark"
-        android:textSize="20dp" />
+        android:textSize="50dp" />
 
     <Button
         android:id="@+id/Prestige"
@@ -40,8 +40,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="Prestige To Gain: 0X"
-        android:layout_alignBottom="@+id/Prestige"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="200dp"
         android:textColor="@android:color/holo_green_dark"
-        android:textSize="20dp" />
+        android:textSize="50dp" />
 
 </RelativeLayout>
